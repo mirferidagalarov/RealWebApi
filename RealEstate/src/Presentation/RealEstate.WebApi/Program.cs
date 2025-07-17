@@ -4,6 +4,14 @@ namespace RealEstate.WebApi
     {
         public static void Main(string[] args)
         {
+            /*
+             ORM,Entity FrameworkCore,DbContext
+
+            Object Relational Mapping
+             */
+
+
+
             var builder = WebApplication.CreateBuilder(args);
             var app = builder.Build();
 

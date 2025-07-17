@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealEstate.Domain", "src\Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealEstate.WebApi", "src\Presentation\RealEstate.WebApi\RealEstate.WebApi.csproj", "{EE4E85C5-5D16-46A5-8799-5E6B8377C5C3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealEstate.Infrastructure", "src\Infrastructure\RealEstate.Infrastructure\RealEstate.Infrastructure.csproj", "{414B0E2F-0918-4559-9461-B0A802902024}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{EE4E85C5-5D16-46A5-8799-5E6B8377C5C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE4E85C5-5D16-46A5-8799-5E6B8377C5C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE4E85C5-5D16-46A5-8799-5E6B8377C5C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{414B0E2F-0918-4559-9461-B0A802902024}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{414B0E2F-0918-4559-9461-B0A802902024}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{414B0E2F-0918-4559-9461-B0A802902024}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{414B0E2F-0918-4559-9461-B0A802902024}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,5 +67,6 @@ Global
 		{A68165D2-7850-4138-BC55-6440206001B4} = {B9E1F3DB-E3DE-41F1-9A27-8FA43CA7AF9B}
 		{E79C8660-A08E-4702-B7F8-076D731E8EAF} = {B9E1F3DB-E3DE-41F1-9A27-8FA43CA7AF9B}
 		{EE4E85C5-5D16-46A5-8799-5E6B8377C5C3} = {21B84FA5-EE61-4D9B-8864-566BB89DF529}
+		{414B0E2F-0918-4559-9461-B0A802902024} = {C4802B9F-A793-42CD-ADDE-A7CBA9925F24}
 	EndGlobalSection
 EndGlobal
