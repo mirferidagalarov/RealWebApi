@@ -7,8 +7,19 @@ using System.Threading.Tasks;
 
 namespace RealEstate.Persistence
 {
-    class DataContext:DbContext
+    public class DataContext : DbContext
     {
+        public DataContext(DbContextOptions dbContextOptions) : base(dbContextOptions)
+        {
+
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+
+            modelBuilder.ApplyConfigurationsFromAssembly(this.GetType().Assembly);
+            base.OnModelCreating(modelBuilder);
+        }
 
     }
 }
