@@ -21,16 +21,9 @@ namespace RealEstate.Infrastructure.Commons
             this.db = db;
             table = db.Set<T>();
         }
-        public T Add(T entity)
-        {
-            this.table.Add(entity);
-            return entity;
-        }
+     
 
-        public void Delete(T entity)
-        {
-            table.Remove(entity);
-        }
+      
 
         public IQueryable<T> GetAll(Expression<Func<T, bool>>? expression = null)
         {
@@ -52,13 +45,22 @@ namespace RealEstate.Infrastructure.Commons
             return query.FirstOrDefault();
         }
 
-        public int Save() => db.SaveChanges();
+        public T Add(T entity)
+        {
+            this.table.Add(entity);
+            return entity;
+        }
 
-
-        public T Update(T entity)
+        public T Edit(T entity)
         {
             table.Update(entity);
             return entity;
         }
+
+        public void Remove(T entity)
+        {
+            table.Remove(entity);
+        }
+        public int Save() => db.SaveChanges();
     }
 }

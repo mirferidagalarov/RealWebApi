@@ -12,8 +12,8 @@ namespace RealEstate.Domain.Commons
         IQueryable<T> GetAll(Expression<Func<T, bool>>? expression = null);
         T? Get(Expression<Func<T, bool>>? expression = null);
         T Add(T entity);
-        T Update(T entity);
-        void Delete(T entity);
+        T Edit(T entity);
+        void Remove(T entity);
         int Save();
     }
 }
