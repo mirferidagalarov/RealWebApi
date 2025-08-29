@@ -11,7 +11,8 @@ namespace RealEstate.WebApi.Controllers
     public class CitiesController(ICityRepository cityRepository,
         IDateTimeService dateTimeService,
         IOtpService otpService,
-        IEmailService emailService) : ControllerBase
+        IEmailService emailService,
+        ICryptoService cryptoService) : ControllerBase
     {
         [HttpGet]
         public IActionResult GetAll()
@@ -55,6 +56,22 @@ namespace RealEstate.WebApi.Controllers
             var isSuccess = await emailService.SendEmailAsync(email, "Mir", message);
 
             return Ok(isSuccess);
+        }
+
+        [HttpGet("md5")]
+        public async Task<IActionResult> MD5(string value)
+        {
+            string result = cryptoService.ToMd5(value);
+
+            return Ok(result);
+        }
+
+        [HttpGet("sha1")]
+        public async Task<IActionResult> Sha1(string value)
+        {
+            string result = cryptoService.ToSha1(value);
+
+            return Ok(result);
         }
     }
 }
