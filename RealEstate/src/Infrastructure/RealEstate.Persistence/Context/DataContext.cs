@@ -5,19 +5,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RealEstate.Persistence
+namespace RealEstate.Persistence.Context
 {
-    public class DataContext : DbContext
+    class DataContext : DbContext
     {
-        public DataContext(DbContextOptions dbContextOptions) : base(dbContextOptions)
-        {
+        public DataContext(DbContextOptions options) : base(options) { }
 
-        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
-            modelBuilder.ApplyConfigurationsFromAssembly(this.GetType().Assembly);
+            modelBuilder.ApplyConfigurationsFromAssembly(GetType().Assembly);
             base.OnModelCreating(modelBuilder);
         }
 

@@ -11,12 +11,12 @@ using System.Threading.Tasks;
 
 namespace RealEstate.Application.Implementations
 {
-    public class EmailService : SmtpClient, IEmailService
+     class EmailService : SmtpClient, IEmailService
     {
         EmailServiceOptions options;
-        public EmailService(IOptions<EmailServiceOptions> options)
+        public EmailService(EmailServiceOptions options)
         {
-            this.options = options.Value;
+            this.options = options;
             this.Host = this.options.Host;
             this.Port = this.options.Port;
             this.EnableSsl = this.options.EnableSsl;

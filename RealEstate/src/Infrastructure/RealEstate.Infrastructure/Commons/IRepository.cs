@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RealEstate.Domain.Commons
+namespace RealEstate.Infrastructure.Commons
 {
     public interface IRepository<T>
     {

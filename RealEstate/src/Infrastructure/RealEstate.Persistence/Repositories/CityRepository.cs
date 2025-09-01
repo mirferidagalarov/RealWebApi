@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace RealEstate.Persistence.Repositories
 {
-    public class CityRepository : GeneralRepository<City>, ICityRepository
+    class CityRepository : GeneralRepository<City>, ICityRepository
     {
         public CityRepository(DbContext dbContext) : base(dbContext)
         {

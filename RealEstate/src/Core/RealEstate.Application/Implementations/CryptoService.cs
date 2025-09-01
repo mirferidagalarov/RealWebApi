@@ -6,7 +6,7 @@ using System.Text;
 
 namespace RealEstate.Application.Implementations
 {
-    public class CryptoService : ICryptoService
+     class CryptoService : ICryptoService
     {
         private readonly MD5 md5;
         private readonly SHA1 sha1;

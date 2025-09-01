@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using RealEstate.Domain.Commons;
+using RealEstate.Infrastructure.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,9 +21,9 @@ namespace RealEstate.Infrastructure.Commons
             this.db = db;
             table = db.Set<T>();
         }
-     
 
-      
+
+
 
         public IQueryable<T> GetAll(Expression<Func<T, bool>>? expression = null)
         {
@@ -42,7 +42,7 @@ namespace RealEstate.Infrastructure.Commons
             if (expression is not null)
                 query = query.Where(expression);
 
-            return query.FirstOrDefault();
+            return query.FirstOrDefault() ?? throw new NotFoundException($"{typeof(T).Name} tapilmadi");
         }
 
         public T Add(T entity)

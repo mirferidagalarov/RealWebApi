@@ -1,5 +1,5 @@
-﻿using RealEstate.Domain.Commons;
-using RealEstate.Domain.Entities;
+﻿using RealEstate.Domain.Entities;
+using RealEstate.Infrastructure.Commons;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace RealEstate.Application.Implementations
 {
-    public class OtpService : HttpClient, IOtpService
+     class OtpService : HttpClient, IOtpService
     {
         const string AVAILABLE_SYMBOLS = "0123456789abcdefgtyzwABCDEFGTYZW";
         OtpServiceOptions options;

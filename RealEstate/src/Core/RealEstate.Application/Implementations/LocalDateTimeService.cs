@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace RealEstate.Application.Implementations
 {
-    public class LocalDateTimeService : IDateTimeService
+    class LocalDateTimeService : IDateTimeService
     {
         public DateTime Current => DateTime.UtcNow.AddHours(4);
     }

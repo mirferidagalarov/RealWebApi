@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Net;
 
-namespace RealEstate.Domain.Commons
+namespace RealEstate.Infrastructure.Commons
 {
     public class ApiResponse
     {
@@ -13,7 +8,7 @@ namespace RealEstate.Domain.Commons
         public string Reason { get; set; }
         public string Message { get; set; }
         public IDictionary<string, IEnumerable<string>> Errors { get; set; }
-        public ApiResponse Success(string message = null, HttpStatusCode statusCode = HttpStatusCode.OK)
+        public static ApiResponse Success(string message = null, HttpStatusCode statusCode = HttpStatusCode.OK)
         {
             return new ApiResponse
             {
@@ -23,7 +18,7 @@ namespace RealEstate.Domain.Commons
 
         }
 
-        public ApiResponse Success<T>(T data, string message = null, HttpStatusCode statusCode = HttpStatusCode.OK)
+        public static ApiResponse Success<T>(T data, string message = null, HttpStatusCode statusCode = HttpStatusCode.OK)
             where T : class
         {
             return new ApiResponse<T>
@@ -35,7 +30,7 @@ namespace RealEstate.Domain.Commons
 
         }
 
-        public ApiResponse Fail(string reason, string message = null, HttpStatusCode statusCode = HttpStatusCode.InternalServerError)
+        public static ApiResponse Fail(string reason, string message = null, HttpStatusCode statusCode = HttpStatusCode.InternalServerError)
         {
             return new ApiResponse
             {
@@ -46,7 +41,7 @@ namespace RealEstate.Domain.Commons
 
         }
 
-        public ApiResponse Fail(IDictionary<string, IEnumerable<string>> errors, string reason, string message = null, HttpStatusCode statusCode = HttpStatusCode.BadRequest)
+        public static ApiResponse Fail(IDictionary<string, IEnumerable<string>> errors, string reason, string message = null, HttpStatusCode statusCode = HttpStatusCode.BadRequest)
         {
             return new ApiResponse
             {
